@@ -1,9 +1,9 @@
-# dynamic-lcia-app
+# dynamic_lcia_app
 
 ```{button-link} https://docs.brightway.dev
 :color: info
 :expand:
-{octicon}`light-bulb;1em` dynamic-lcia-app is a specialized package of the Brightway Software Framework
+{octicon}`light-bulb;1em` dynamic_lcia_app is a specialized package of the Brightway Software Framework
 ```
 
 ```{toctree}

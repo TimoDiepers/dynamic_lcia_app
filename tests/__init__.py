@@ -1,1 +1,1 @@
-"""Test suite for the dynamic-lcia-app package."""
+"""Test suite for the dynamic_lcia_app package."""

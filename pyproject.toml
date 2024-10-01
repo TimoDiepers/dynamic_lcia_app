@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dynamic-lcia-app"
+name = "dynamic_lcia_app"
 authors = [
   { name="Timo Diepers", email="timo.diepers@ltt.rwth-aachen.de" }
 ]
@@ -34,15 +34,15 @@ dependencies = [
 ]
 
 [project.urls]
-source = "https://github.com/TimoDiepers/dynamic-lcia-app"
-homepage = "https://github.com/TimoDiepers/dynamic-lcia-app"
-tracker = "https://github.com/TimoDiepers/dynamic-lcia-app/issues"
+source = "https://github.com/TimoDiepers/dynamic_lcia_app"
+homepage = "https://github.com/TimoDiepers/dynamic_lcia_app"
+tracker = "https://github.com/TimoDiepers/dynamic_lcia_app/issues"
 
 [project.optional-dependencies]
 # Getting recursive dependencies to work is a pain, this
 # seems to work, at least for now
 testing = [
-    "dynamic-lcia-app",
+    "dynamic_lcia_app",
     "pytest",
     "pytest-cov",
     "python-coveralls"
@@ -60,13 +60,13 @@ dev = [
 [tool.setuptools]
 license-files = ["LICENSE"]
 include-package-data = true
-packages = ["dynamic-lcia-app"]
+packages = ["dynamic_lcia_app"]
 
 [tool.setuptools.dynamic]
-version = {attr = "dynamic-lcia-app.__version__"}
+version = {attr = "dynamic_lcia_app.__version__"}
 
 [tool.pytest.ini_options]
-addopts = "--cov dynamic-lcia-app --cov-report term-missing --verbose"
+addopts = "--cov dynamic_lcia_app --cov-report term-missing --verbose"
 norecursedirs = [
     "dist",
     "build",

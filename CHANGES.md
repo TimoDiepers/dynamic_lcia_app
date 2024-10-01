@@ -1,4 +1,4 @@
-# `dynamic-lcia-app` Changelog
+# `dynamic_lcia_app` Changelog
 
 All notable changes to this project will be documented in this file.
 

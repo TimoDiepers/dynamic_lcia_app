@@ -8,7 +8,7 @@ import datetime
 
 ### project information ###########################################################################
 
-project = "dynamic-lcia-app"
+project = "dynamic_lcia_app"
 author = "Brightway Developers"
 copyright = datetime.date.today().strftime("%Y") + ' Brightway Developers'
 
@@ -48,7 +48,7 @@ intersphinx_mapping = {
 ### theme configuration ############################################################################
 
 html_theme = "sphinx_rtd_theme"
-html_title = "dynamic-lcia-app"
+html_title = "dynamic_lcia_app"
 html_show_sphinx = False
 
 html_theme_options = {
@@ -101,7 +101,7 @@ autoapi_root = 'content/api'
 autoapi_keep_files = False
 
 autoapi_dirs = [
-    '../dynamic-lcia-app',
+    '../dynamic_lcia_app',
 ]
 
 autoapi_ignore = [
