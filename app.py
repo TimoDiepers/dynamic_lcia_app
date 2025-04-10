@@ -48,7 +48,7 @@ if metric_selection:
     metric_mapping = {"Radiative Forcing": "radiative_forcing", "Global Warming Potential": "GWP"}
     metric = metric_mapping[metric_selection]
     
-    col_th_rf, col_th_rf_f = st.columns([3, 1])
+    col_th_rf, col_th_rf_f = st.columns([2, 1])
     with col_th_rf:
         time_horizon_rf = st.slider(
             "Time Horizon",
@@ -58,7 +58,13 @@ if metric_selection:
             step=1,
         )
     with col_th_rf_f:
-        fixed_th_rf = st.checkbox("Fixed Time Horizon", value=False, key="fixed_checkbox_rf")
+        fixed_th_rf = st.checkbox("Fixed Time Horizon", value=False)
+        if metric == "radiative_forcing":
+            cumulative = st.checkbox("Cumulative Radiative Forcing", value=False)
+        else: 
+            cumulative = False
+        differentiate_emissions = st.checkbox("Differentiate Emissions", value=True)
+            
 
     characterized_df = characterize(
         df,
@@ -74,4 +80,8 @@ if metric_selection:
     plot_data = characterized_df.pivot(
                     index="date", columns="flow", values="amount"
                 )
+    if not differentiate_emissions:
+        plot_data = plot_data.sum(axis=1)
+    if cumulative:
+        plot_data = plot_data.cumsum()
     st.scatter_chart(plot_data)
