@@ -1,9 +1,7 @@
 import io
 import streamlit as st
 import pandas as pd
-import altair as alt
 
-from datetime import datetime
 from dynamic_characterization.ipcc_ar6.radiative_forcing import (
     characterize_co2,
     characterize_ch4,
